@@ -60,7 +60,7 @@ The following method prints members that match search criteria that you specify:
 
 ```
 public static void printPersons(
-    List<Person> roster, CheckPerson tester) {
+    List<Person> roster, lambdas.CheckPerson tester) {
     for (Person p : roster) {
         if (tester.test(p)) {
             p.printPerson();
@@ -69,12 +69,12 @@ public static void printPersons(
 }
 ```
 
-This method checks each Person instance contained in the List parameter roster whether it satisfies the search criteria specified in the CheckPerson parameter tester by invoking the method tester.test. If the method tester.test returns a true value, then the method printPersons is invoked on the Person instance.
+This method checks each Person instance contained in the List parameter roster whether it satisfies the search criteria specified in the lambdas.CheckPerson parameter tester by invoking the method tester.test. If the method tester.test returns a true value, then the method printPersons is invoked on the Person instance.
 
-To specify the search criteria, you implement the CheckPerson interface:
+To specify the search criteria, you implement the lambdas.CheckPerson interface:
 
 ```
-interface CheckPerson {
+interface lambdas.CheckPerson {
     boolean test(Person p);
 }
 ```
